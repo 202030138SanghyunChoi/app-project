@@ -1,4 +1,4 @@
-export default async function Pag() {
+export default async function TestAPI() {
   let data = await fetch("https://api.vercel.app/blog");
   let posts = await data.json();
 
