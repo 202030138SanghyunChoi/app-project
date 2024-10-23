@@ -14,6 +14,9 @@ export default function NavBar() {
         <li>
           <Link href="/test-api">Test_API</Link>
         </li>
+        <li>
+          <Link href="/image">Image</Link>
+        </li>
       </ul>
       <hr />
     </nav>
