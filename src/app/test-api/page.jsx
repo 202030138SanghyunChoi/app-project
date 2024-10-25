@@ -5,24 +5,22 @@ import {useState, useEffect} from "react";
 
 export default function TestAPI() {
     const [users, setUsers] = useState(null);
-    const [posts, setPosts] = useState([]);
-    const [postsAPI, setPostsAPI] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    const fetch = async () => {
+        try {
+            const res = await axios.get("http://localhost:3001/test");
+            setUsers(res.data);
+        } catch (e) {
+            console.error("Error: ", e);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     // 컴포넌트 첫 렌더링 시 한번만 데이터를 가져오기 위해 useEffect 사용
     useEffect(() => {
-        const fetchUsers = async () => {
-            try {
-                const res = await axios.get("http://localhost:3001/test");
-                setUsers(res.data);
-            } catch (e) {
-                console.error("Error: ", e);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchUsers();
+        fetch();
     }, []);
 
     if (loading) return <h1>Loading..</h1>;
@@ -33,8 +31,8 @@ export default function TestAPI() {
     // const users = res.data;
 
     // fetch API
-    //let testData = await fetch("https://api.vercel.app/blog");
-    //let testPosts = await testData.json();
+    // let testData = await fetch("https://api.vercel.app/blog");
+    // let testPosts = await testData.json();
 
     return (
         <>
