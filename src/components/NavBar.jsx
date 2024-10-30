@@ -17,6 +17,9 @@ export default function NavBar() {
         <li>
           <Link href="/image">Image</Link>
         </li>
+        <li>
+          <Link href="/css">CSS</Link>
+        </li>
       </ul>
       <hr />
     </nav>
