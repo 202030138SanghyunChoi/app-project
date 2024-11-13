@@ -24,6 +24,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.light a {
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+body.dark a {
+  color: white;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

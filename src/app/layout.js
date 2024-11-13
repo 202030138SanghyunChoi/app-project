@@ -3,6 +3,7 @@ import RootFooter from "../components/RootFooter";
 import NavBar from "../components/NavBar";
 import ThemeToggleButton from "@/components/ThemeToggleButton";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import './globals.css';
 
 export const metadata = {
   title: "Next.js Page",
