@@ -1,6 +1,8 @@
 import RootHeader from "../components/RootHeader";
 import RootFooter from "../components/RootFooter";
 import NavBar from "../components/NavBar";
+import ThemeToggleButton from "@/components/ThemeToggleButton";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata = {
   title: "Next.js Page",
@@ -10,12 +12,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body>
-        <RootHeader />
-        <NavBar />
-        <main>{children}</main>
-        <RootFooter />
-      </body>
+      <ThemeProvider>
+        <body>
+          <RootHeader />
+          <ThemeToggleButton />
+          <NavBar />
+          <main>{children}</main>
+          <RootFooter />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

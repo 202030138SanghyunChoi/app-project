@@ -20,6 +20,9 @@ export default function NavBar() {
         <li>
           <Link href="/css">CSS</Link>
         </li>
+        <li>
+          <Link href="props">Props</Link>
+        </li>
       </ul>
       <hr />
     </nav>
