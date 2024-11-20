@@ -3,7 +3,9 @@ import RootFooter from "../components/RootFooter";
 import NavBar from "../components/NavBar";
 import ThemeToggleButton from "@/components/ThemeToggleButton";
 import { ThemeProvider } from "@/contexts/ThemeContext";
-import './globals.css';
+import CounterProvider from "@/store/CounterProvider";
+import Counter from "@/features/counter/Counter";
+import "./globals.css";
 
 export const metadata = {
   title: "Next.js Page",
@@ -13,15 +15,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <ThemeProvider>
-        <body>
-          <RootHeader />
-          <ThemeToggleButton />
-          <NavBar />
-          <main>{children}</main>
-          <RootFooter />
-        </body>
-      </ThemeProvider>
+      <CounterProvider>
+        <ThemeProvider>
+          <body>
+            <RootHeader />
+            <ThemeToggleButton />
+            <Counter />
+            <NavBar />
+            <main>{children}</main>
+            <RootFooter />
+          </body>
+        </ThemeProvider>
+      </CounterProvider>
     </html>
   );
 }

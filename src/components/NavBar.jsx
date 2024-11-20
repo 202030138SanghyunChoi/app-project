@@ -23,6 +23,9 @@ export default function NavBar() {
         <li>
           <Link href="props">Props</Link>
         </li>
+        <li>
+          <Link href="redux">Redux</Link>
+        </li>
       </ul>
       <hr />
     </nav>
