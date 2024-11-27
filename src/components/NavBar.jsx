@@ -6,25 +6,32 @@ export default function NavBar() {
       <hr />
       <ul>
         <li>
-          <Link href="/">HOME</Link>
+          <Link href="/app-project">HOME</Link> |
+          <Link href="/">Local HOME</Link>
         </li>
         <li>
-          <Link href="/router">Router</Link>
+          <Link href="/app-project/router">Router</Link> |
+          <Link href="/router">Local Router</Link>
         </li>
         <li>
-          <Link href="/test-api">Test_API</Link>
+          <Link href="/app-project/test-api">Test_API</Link> |
+          <Link href="/test-api">Local Test_API</Link>
         </li>
         <li>
-          <Link href="/image">Image</Link>
+          <Link href="/app-project/image">Image</Link> |
+          <Link href="/image">Local Image</Link>
         </li>
         <li>
-          <Link href="/css">CSS</Link>
+          <Link href="/app-project/css">CSS</Link> |
+          <Link href="/css">Local CSS</Link>
         </li>
         <li>
-          <Link href="props">Props</Link>
+          <Link href="/app-project/props">Props</Link> |
+          <Link href="/props">Local Props</Link>
         </li>
         <li>
-          <Link href="redux">Redux</Link>
+          <Link href="/app-project/redux">Redux</Link> |
+          <Link href="/redux">Local Redux</Link>
         </li>
       </ul>
       <hr />
